@@ -1,0 +1,27 @@
+PORTAFOLIO - CÓMO AGREGAR TU CONTENIDO
+======================================
+
+1) IMÁGENES Y VIDEOS
+   Guarda tus archivos con estos nombres:
+
+   img/diseno/   ->  diseno-1.jpg, diseno-2.jpg ... diseno-5.jpg
+   img/video/    ->  video-1.mp4, video-2.mp4 ... video-4.mp4
+   img/digital/  ->  digital-1.jpg, digital-2.jpg ... digital-4.jpg
+
+   Mientras un archivo no exista, la página muestra un marcador de posición.
+   Formato recomendado para imágenes: vertical 4:5 (por ejemplo 1200 x 1500 px).
+
+   ¿Otros nombres o formatos (.png, .webp)? Cambia el "src" en index.html.
+   ¿Más piezas? Copia una línea { tipo: ..., src: ..., } dentro de la categoría.
+   ¿Video de YouTube? Usa:  { tipo: "youtube", src: "ID_DEL_VIDEO", titulo: "...", descripcion: "..." }
+
+2) TEXTOS Y CONTACTO
+   Abre index.html (en VS Code, por ejemplo) y edita el bloque CONFIG del principio:
+   textos, experiencia, educación, WhatsApp, correo e Instagram.
+
+3) TU FOTO Y ESCUDO
+   img/foto.jpg y img/uacj.webp. Reemplázalos con el mismo nombre si quieres cambiarlos.
+
+4) PUBLICAR EN GITHUB PAGES
+   Sube todo el contenido de esta carpeta a un repositorio y activa
+   Settings > Pages > "Deploy from a branch" (rama main, carpeta /root).
