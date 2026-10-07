@@ -5,7 +5,7 @@ UI.es = {
   htmlLang: "es", pageTitle: "Aron · Portafolio 2026",
   navSecciones: "Secciones", menuAbrir: "Abrir menú", logoAlt: "Logo de mi portafolio",
   navInicio: "Inicio", navEducacion: "Educación", navExperiencia: "Experiencia", navTrabajos: "Trabajos", navContacto: "Contacto",
-  ctaWork: "Ver mi trabajo", ctaContact: "Contactarme",
+  ctaWork: "Ver mi trabajo", ctaContact: "Contactarme", ctaCV: "Ver CV (EN)",
   dotsAria: "Progreso de secciones", dotsGoTo: id => `Ir a ${id}`,
   sealAlt: "Escudo de la Universidad Autónoma de Ciudad Juárez",
   expTitle: "Experiencia",

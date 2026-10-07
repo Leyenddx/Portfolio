@@ -4,7 +4,7 @@ UI.en = {
   htmlLang: "en", pageTitle: "Aron · Portfolio 2026",
   navSecciones: "Sections", menuAbrir: "Open menu", logoAlt: "My portfolio logo",
   navInicio: "Home", navEducacion: "Education", navExperiencia: "Experience", navTrabajos: "Work", navContacto: "Contact",
-  ctaWork: "See my work", ctaContact: "Contact me",
+  ctaWork: "See my work", ctaContact: "Contact me", ctaCV: "View CV",
   dotsAria: "Section progress", dotsGoTo: id => `Go to ${id}`,
   sealAlt: "Seal of the Autonomous University of Ciudad Juárez",
   expTitle: "Experience",

@@ -27,6 +27,7 @@
     $("#navContacto").textContent = T.navContacto;
     $("#ctaWork").textContent = T.ctaWork;
     $("#ctaContact").textContent = T.ctaContact;
+    $("#ctaCV").textContent = T.ctaCV;
     $("#dots").setAttribute("aria-label", T.dotsAria);
     $("#dots").querySelectorAll("button").forEach(b => b.setAttribute("aria-label", T.dotsGoTo(b.dataset.id)));
     $("#expTitle").textContent = T.expTitle;
