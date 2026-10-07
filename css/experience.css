@@ -1,0 +1,13 @@
+/* EXPERIENCIA: panel con línea de tiempo de trabajos */
+.exp{background:var(--blue);padding:110px 0}
+.exp .shape--tri{top:-5%;right:-2%;width:48%;height:110%;background:var(--red);clip-path:polygon(100% 0,100% 100%,0 50%)}
+.panel{position:relative;z-index:2;background:var(--paper);border:3px solid var(--red);border-radius:40px 0 0 40px;padding:clamp(2rem,5vw,4rem);max-width:980px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.panel h2{font-size:clamp(2rem,4vw,3rem);font-weight:900}
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:2.8rem 3.4rem;margin-top:2.6rem}
+.job{position:relative;padding-left:1.4rem;border-left:3px solid var(--line)}
+.job::before{content:"";position:absolute;left:-3px;top:0;width:3px;height:0;background:var(--red);transition:height 1s .2s var(--ease)}
+.job.in::before{height:100%}
+.job h3{font-size:1.35rem;font-weight:800;text-transform:uppercase;color:var(--blue)}
+.job .role{font-weight:700;margin:.35rem 0 0}
+.job .when{font-size:.9rem;color:var(--muted);margin:.1rem 0 .7rem}
+.job p{margin:0;color:var(--muted);font-size:.98rem}

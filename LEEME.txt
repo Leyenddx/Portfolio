@@ -11,13 +11,21 @@ PORTAFOLIO - CÓMO AGREGAR TU CONTENIDO
    Mientras un archivo no exista, la página muestra un marcador de posición.
    Formato recomendado para imágenes: vertical 4:5 (por ejemplo 1200 x 1500 px).
 
-   ¿Otros nombres o formatos (.png, .webp)? Cambia el "src" en index.html.
+   ¿Otros nombres o formatos (.png, .webp)? Cambia el "src" en js/data/content-es.js y content-en.js.
    ¿Más piezas? Copia una línea { tipo: ..., src: ..., } dentro de la categoría.
    ¿Video de YouTube? Usa:  { tipo: "youtube", src: "ID_DEL_VIDEO", titulo: "...", descripcion: "..." }
 
 2) TEXTOS Y CONTACTO
-   Abre index.html (en VS Code, por ejemplo) y edita el bloque CONFIG del principio:
-   textos, experiencia, educación, WhatsApp, correo e Instagram.
+   Edita js/data/content-es.js (español) y js/data/content-en.js (inglés):
+   textos, experiencia, educación, trabajos, WhatsApp, correo e Instagram.
+   Los textos de menú/botones están en js/data/ui-es.js y js/data/ui-en.js.
+
+2.1) ESTRUCTURA DEL PROYECTO
+   index.html          -> estructura (secciones)
+   css/                -> estilos, un archivo por sección/componente
+   js/data/            -> contenido y textos (ES/EN)
+   js/                 -> lógica: idioma, tema, render, galería, lightbox, navegación, scroll
+   img/                -> imágenes e iconos
 
 3) TU FOTO Y ESCUDO
    img/foto.jpg y img/uacj.webp. Reemplázalos con el mismo nombre si quieres cambiarlos.

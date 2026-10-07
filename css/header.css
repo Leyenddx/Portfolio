@@ -1,0 +1,24 @@
+/* HEADER: barra fija, logo, navegación, botón idioma/tema y menú móvil */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:transform .4s var(--ease)}
+.top__bar{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.top__inner{display:flex;align-items:center;justify-content:flex-end;height:64px;gap:.5rem;transition:height .35s var(--ease)}
+.top__rule{height:12px;background:var(--red);transform-origin:left;transition:height .35s var(--ease)}
+.top.is-compact .top__inner{height:52px}
+.top.is-compact .top__rule{height:5px}
+.logo{position:absolute;left:0;top:0;width:66px;height:124px;transition:transform .45s var(--ease);transform-origin:top center;filter:drop-shadow(0 8px 10px rgba(0,0,0,.18))}
+.top.is-compact .logo{transform:scale(.58)}
+.logo svg{width:100%;height:100%}
+.nav{display:flex;gap:clamp(.4rem,2.2vw,2.4rem);margin-right:auto;margin-left:clamp(90px,14vw,190px)}
+.nav a{font:500 1rem var(--body);text-decoration:none;padding:.4rem .2rem;position:relative;color:var(--ink)}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav a:hover::after,.nav a.is-active::after{transform:scaleX(1);transform-origin:left}
+.menu-btn{display:none;background:none;border:0;color:var(--ink);width:44px;height:44px;cursor:pointer}
+.menu-btn span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:transform .3s}
+.lang-btn{flex-shrink:0;background:none;border:2px solid var(--blue);color:var(--blue);border-radius:999px;padding:.4rem .95rem;font:700 .85rem var(--body);letter-spacing:.03em;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease);position:relative;z-index:2}
+.lang-btn:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
+.theme-btn{flex-shrink:0;display:grid;place-items:center;width:38px;height:38px;padding:0;background:none;border:2px solid var(--blue);color:var(--blue);border-radius:50%;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease);position:relative;z-index:2}
+.theme-btn:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
+.theme-btn svg{width:18px;height:18px}
+.theme-btn .i-sun{display:none}
+:root[data-theme="dark"] .theme-btn .i-sun{display:block}
+:root[data-theme="dark"] .theme-btn .i-moon{display:none}

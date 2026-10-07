@@ -1,0 +1,6 @@
+/* DOTS: indicador lateral de progreso entre secciones */
+.dots{position:fixed;right:clamp(10px,2.2vw,36px);top:50%;transform:translateY(-50%);z-index:40;background:var(--red);border-radius:20px;padding:22px 11px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow);transition:background .5s}
+.dots.on-red{background:var(--blue)}
+.dots button{width:15px;height:15px;border-radius:50%;border:2px solid #fff;background:#fff;padding:0;cursor:pointer;transition:background .3s,transform .3s}
+.dots button.is-active{background:transparent;transform:scale(1.25)}
+.dots button:hover{transform:scale(1.25)}

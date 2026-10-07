@@ -1,0 +1,22 @@
+/* VARIABLES: paleta, tipografías, easing y tema oscuro (claro/oscuro) */
+:root{
+  --blue:#12467A; --blue-deep:#0C3259; --red:#A51731; --red-deep:#7E0F23;
+  --paper:#ECECEC; --surface:#FFFFFF; --ink:#131922; --muted:#4B5563;
+  --on-color:#FFFFFF; --sky:#BFE3FB; --line:rgba(18,70,122,.28);
+  --shadow:0 18px 40px -18px rgba(12,50,89,.45);
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Lato","Segoe UI",Helvetica,Arial,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --blue:#1C5A98; --blue-deep:#0E2F52; --red:#B81F3B; --red-deep:#8A1227;
+    --paper:#0F1826; --surface:#172437; --ink:#E9EEF5; --muted:#A9B4C3;
+    --sky:#2A5A86; --line:rgba(160,195,235,.28); --shadow:0 18px 40px -18px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --blue:#1C5A98; --blue-deep:#0E2F52; --red:#B81F3B; --red-deep:#8A1227;
+  --paper:#0F1826; --surface:#172437; --ink:#E9EEF5; --muted:#A9B4C3;
+  --sky:#2A5A86; --line:rgba(160,195,235,.28); --shadow:0 18px 40px -18px rgba(0,0,0,.7);
+}

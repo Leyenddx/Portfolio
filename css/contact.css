@@ -1,0 +1,18 @@
+/* CONTACTO: título, tarjetas de contacto (WhatsApp/correo/Instagram) y pie de página */
+.contact{background:var(--red);color:#fff;padding:120px 0 60px}
+.contact .shape--paper{inset:-10%;background:var(--paper);clip-path:polygon(0 58%,100% 78%,100% 100%,0 100%)}
+.contact .shape--blue{inset:-10%;background:var(--blue);clip-path:polygon(100% 0,100% 30%,70% 0)}
+.contact h2{font-size:clamp(2.4rem,6vw,4.8rem);font-weight:900;text-transform:uppercase;text-align:center;font-stretch:125%}
+.contact__lead{text-align:center;max-width:32em;margin:1rem auto 3rem;opacity:.92}
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.way{background:var(--surface);color:var(--ink);border-radius:18px;padding:1.6rem;text-decoration:none;display:flex;flex-direction:column;gap:.4rem;box-shadow:0 24px 40px -22px rgba(0,0,0,.55);transition:transform .4s var(--ease);position:relative;overflow:hidden}
+.way::before{content:"";position:absolute;inset:auto -20% -60% auto;width:160px;height:160px;background:var(--blue);clip-path:polygon(100% 0,100% 100%,0 100%);opacity:.12;transition:transform .5s var(--ease)}
+.way:hover{transform:translateY(-8px)}
+.way:hover::before{transform:scale(1.6)}
+.way__icon{width:48px;height:48px;border-radius:12px;background:var(--blue);display:grid;place-items:center;margin-bottom:.6rem}
+.way__icon svg{width:26px;height:26px}
+.way strong{font:800 1.2rem var(--display);font-stretch:112%}
+.way span{color:var(--muted);word-break:break-word}
+.way em{font-style:normal;font-weight:700;color:var(--red);margin-top:.6rem}
+.foot{margin-top:5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;color:var(--ink);font-size:.9rem;position:relative;z-index:2}
+.foot button{background:none;border:2px solid var(--ink);color:var(--ink);border-radius:8px;padding:.5rem .9rem;font:700 .9rem var(--body);cursor:pointer}

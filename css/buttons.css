@@ -1,0 +1,6 @@
+/* BOTONES: .btn sólido y ghost (CTA) */
+.btn{display:inline-flex;align-items:center;gap:.6rem;font:700 1rem var(--body);padding:.9rem 1.5rem;border-radius:10px;text-decoration:none;border:2px solid var(--blue);cursor:pointer;transition:transform .3s var(--ease),background .3s,color .3s}
+.btn--solid{background:var(--blue);color:#fff}
+.btn--solid:hover{background:var(--red);border-color:var(--red);transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--blue)}
+.btn--ghost:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}

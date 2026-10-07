@@ -1,0 +1,5 @@
+/* REVEAL: animaciones de aparición al hacer scroll (.rv, .rv-up) */
+.rv{clip-path:polygon(0 0,0 0,0 100%,0 100%);transition:clip-path 1.1s var(--ease)}
+.rv.in{clip-path:polygon(0 0,110% 0,100% 100%,0 100%)}
+.rv-up{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv-up.in{opacity:1;transform:none}
