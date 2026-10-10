@@ -17,7 +17,7 @@ CONFIG.es = {
     profesional: {
       titulo: "Educación profesional",
       subtitulo: "Universidad Autónoma de Ciudad Juárez",
-      texto: "Recién egresado de la carrera de Diseño Digital de medios interactivos en el campus IADA de la UACJ. DDMI es una carrera que fusiona lo mejor de varias ramas de la tecnología, el diseño, la ingeniería y el arte. No se deje engañar, aunque recién egrese de la carrera, tengo experiencia laboral desde hace años ya que he tenido la oportunidad de trabajar en diversos proyectos, empresas y agencias que me ayudaron."
+      texto: "Recién egresado de la carrera de Diseño Digital de medios interactivos en el campus IADA de la UACJ. DDMI es una carrera que fusiona lo mejor de varias ramas de la tecnología, el diseño, la ingeniería y el arte. No se deje engañar, aunque recién egrese de la carrera, tengo experiencia laboral desde hace años ya que he tenido la oportunidad de trabajar en diversos proyectos, empresas y agencias que me ayudaron a desarrollarme profesionalmente."
     },
     complementaria: {
       titulo: "Educación complementaria",
