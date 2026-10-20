@@ -1,27 +1,45 @@
-/* HERO: portada, título animado, retrato y scroll cue */
-.hero{min-height:100svh;padding:calc(env(safe-area-inset-top,0px) + 150px) 0 120px;display:flex;align-items:center}
-.hero .shape--band{top:20%;bottom:-30%;left:0;right:0;background:var(--blue);clip-path:polygon(100% 0,100% 100%,0 100%);animation:band 1.3s var(--ease) both}
-.hero .shape--thin{inset:0;background:var(--red);clip-path:polygon(100% 11%,100% 13.5%,58% 59.7%,58% 57.2%);opacity:.9;animation:fadeIn 1s .9s both}
-@keyframes band{from{clip-path:polygon(100% 0,100% 0,100% 0)}}
-.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
-.hero__kicker{font:700 1rem var(--body);color:var(--red);margin:0 0 1rem;display:flex;align-items:center;gap:.7rem}
-.hero__kicker::before{content:"";width:36px;height:3px;background:currentColor}
-.hero h1{font-size:clamp(2.3rem,5vw,4.3rem);font-weight:900;text-transform:uppercase;font-stretch:125%}
-.hero h1 .ln{display:block;overflow:hidden}
-.hero h1 .ln>span{display:block;animation:rise 1s var(--ease) both}
-.hero h1 .ln:nth-child(2)>span{animation-delay:.12s}
+/* HERO: disponibilidad, título de especialidad, CTA de contacto, collage de trabajos y clientes */
+.hero{padding:calc(var(--header) + env(safe-area-inset-top,0px) + clamp(2.5rem,6vw,4.5rem)) 0 0;overflow:hidden}
+/* Banda diagonal azul detrás del collage (identidad de marca) */
+.collage::before{content:"";position:absolute;top:-16%;bottom:-10%;left:24%;right:-50vw;background:var(--blue);clip-path:polygon(28% 0,100% 0,100% 100%,0 100%);z-index:0;animation:band 1.2s var(--ease) both}
+@keyframes band{from{clip-path:polygon(100% 0,100% 0,100% 100%,100% 100%)}}
+.hero__grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 
+.badge{display:inline-flex;align-items:center;gap:.5rem;font:700 .88rem var(--body);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem .4rem .7rem;margin-bottom:1.4rem;box-shadow:var(--shadow);animation:fadeIn .7s .1s both}
+.badge i{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 2.2s infinite}
+.badge__sep{color:var(--muted)}
+.badge span:last-child{color:var(--muted);font-weight:400}
+@keyframes pulse{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+.hero h1{font-size:clamp(1.9rem,3.7vw,3.5rem);font-weight:900;text-transform:uppercase;font-stretch:112%;line-height:1}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ln>span{display:block;animation:rise .9s var(--ease) both}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.08s;color:var(--red)}
+.hero h1 .ln:nth-child(3)>span{animation-delay:.16s}
 @keyframes rise{from{transform:translateY(105%)}}
-.hero__text{max-width:34em;margin:1.6rem 0 2rem;color:var(--muted);animation:fadeIn .9s .55s both}
-.hero__cta{display:flex;flex-wrap:wrap;gap:.8rem;animation:fadeIn .9s .7s both}
-@keyframes fadeIn{from{opacity:0;transform:translateY(14px)}}
-.portrait{position:relative;justify-self:center;width:min(430px,100%)}
-.portrait__frame{position:relative;aspect-ratio:1;background:#fff;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);animation:unveil 1.2s .35s var(--ease) both;box-shadow:var(--shadow)}
-.portrait__frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:settle 1.8s .35s var(--ease) both}
-@keyframes unveil{from{clip-path:polygon(0 100%,0 100%,0 100%,0 100%)}}
-@keyframes settle{from{transform:scale(1.25)}}
-.portrait__offset{position:absolute;inset:18px -18px -18px 18px;border:3px solid var(--red);z-index:-1;animation:fadeIn 1s 1s both}
-.portrait__tag{position:absolute;left:-22px;bottom:28px;background:var(--red);color:#fff;font:800 1rem var(--display);font-stretch:120%;padding:.7rem 1.1rem;animation:fadeIn .8s 1.2s both}
-.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;width:26px;height:42px;border:2px solid var(--on-color);border-radius:14px;opacity:.8}
-.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--on-color);animation:cue 1.8s infinite}
-@keyframes cue{60%{transform:translateY(12px);opacity:0}100%{opacity:0}}
+.hero__text{max-width:36em;margin:1.4rem 0 1.8rem;color:var(--muted);font-size:1.1rem;animation:fadeIn .8s .4s both}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.7rem;animation:fadeIn .8s .5s both}
+.link-cv{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.1rem;font-weight:700;color:var(--accent-text);text-decoration:none;border-bottom:2px solid transparent;transition:border-color .3s;animation:fadeIn .8s .6s both}
+.link-cv svg{width:18px;height:18px}
+.link-cv:hover{border-color:currentColor}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}}
+
+/* Collage: una pieza destacada por disciplina */
+.collage{position:relative;isolation:isolate;aspect-ratio:1/1.02;width:min(520px,100%);justify-self:center}
+.collage__card{position:absolute;display:block;border-radius:12px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow-lg);border:5px solid var(--surface);transition:transform .5s var(--ease),z-index 0s;animation:pop .9s var(--ease) both}
+.collage__card img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.collage__card:hover,.collage__card:focus-visible{transform:rotate(0) scale(1.04);z-index:5}
+.collage__card:hover img{transform:scale(1.05)}
+.collage__card--1{left:0;top:9%;width:50%;aspect-ratio:3/4;transform:rotate(-5deg);z-index:2;animation-delay:.25s}
+.collage__card--2{right:0;top:0;width:60%;aspect-ratio:16/9;transform:rotate(3deg);z-index:3;animation-delay:.4s}
+.collage__card--3{right:3%;bottom:6%;width:64%;aspect-ratio:2/1;transform:rotate(-2deg);z-index:4;animation-delay:.55s}
+@keyframes pop{from{opacity:0;translate:0 30px}}
+.collage__label{position:absolute;left:.6rem;bottom:.6rem;display:flex;align-items:center;gap:.45rem;background:var(--surface);color:var(--ink);font:800 .8rem var(--display);font-stretch:110%;padding:.35rem .65rem;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.collage__label b{color:var(--red)}
+.collage .play{width:52px;height:52px}
+
+/* Clientes */
+.clients{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.6rem;margin-top:clamp(2.5rem,6vw,4.5rem);padding:1.3rem 0;border-top:1px solid var(--line);font-size:.92rem}
+.clients>span{font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:.75rem}
+.clients ul{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem}
+.clients li{font:800 1rem var(--display);font-stretch:112%;color:var(--ink);opacity:.8}

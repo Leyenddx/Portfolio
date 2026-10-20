@@ -1,0 +1,7 @@
+/* DOCK: contacto rápido flotante (WhatsApp y correo), visible al pasar la portada */
+.dock{position:fixed;right:clamp(12px,2vw,28px);bottom:calc(env(safe-area-inset-bottom,0px) + clamp(12px,2vw,28px));z-index:45;display:flex;gap:.5rem;padding:.4rem;border-radius:999px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-lg);transform:translateY(140%);opacity:0;visibility:hidden;transition:transform .45s var(--ease),opacity .3s,visibility .45s}
+.dock.show{transform:none;opacity:1;visibility:visible}
+.dock__btn{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1rem;border-radius:999px;font:700 .9rem var(--body);text-decoration:none;background:var(--blue);color:#fff;transition:background .3s,transform .3s var(--ease)}
+.dock__btn svg{width:20px;height:20px}
+.dock__btn--wa{background:#1F9D55}
+.dock__btn:hover{transform:translateY(-2px);background:var(--red)}

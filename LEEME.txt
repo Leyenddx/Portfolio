@@ -1,35 +1,59 @@
 PORTAFOLIO - CÓMO AGREGAR TU CONTENIDO
 ======================================
 
-1) IMÁGENES Y VIDEOS
-   Guarda tus archivos con estos nombres:
+ORDEN DE LA PÁGINA
+   1. Portada: qué haces + WhatsApp/correo/CV + collage con una pieza por disciplina
+   2. Trabajos: filtros (Todo / Diseño gráfico / Edición de video / Diseño digital)
+      01 Diseño gráfico  -> galería tipo masonry (las piezas se ven completas)
+      02 Edición de video -> horizontales a la izquierda, verticales (Shorts/Reels) a la derecha
+      03 Diseño digital   -> proyectos con descripción y botón de enlace (itch.io, web, etc.)
+   3. Perfil (resumido): sobre mí, experiencia, habilidades, idiomas, educación, herramientas
+   4. Contacto: WhatsApp, correo (con botón "Copiar"), Instagram y CV
+   + Barra flotante de WhatsApp/correo que aparece al bajar de la portada
 
-   img/diseno/   ->  diseno-1.jpg, diseno-2.jpg ... diseno-5.jpg
-   img/video/    ->  video-1.mp4, video-2.mp4 ... video-4.mp4
-   img/digital/  ->  digital-1.jpg, digital-2.jpg ... digital-4.jpg
+1) AGREGAR TRABAJOS
+   Edita js/data/content-es.js (español) y js/data/content-en.js (inglés), sección "trabajos".
 
-   Mientras un archivo no exista, la página muestra un marcador de posición.
-   Formato recomendado para imágenes: vertical 4:5 (por ejemplo 1200 x 1500 px).
+   Imagen (diseño gráfico):
+     { tipo: "imagen", src: "img/diseno/archivo.webp", titulo: "...", cliente: "...", formato: "Cartel", descripcion: "..." }
 
-   ¿Otros nombres o formatos (.png, .webp)? Cambia el "src" en js/data/content-es.js y content-en.js.
-   ¿Más piezas? Copia una línea { tipo: ..., src: ..., } dentro de la categoría.
-   ¿Video de YouTube? Usa:  { tipo: "youtube", src: "ID_DEL_VIDEO", titulo: "...", descripcion: "..." }
+   Video de YouTube (usa el ID que va después de v= en el enlace):
+     { tipo: "youtube", src: "ID_DEL_VIDEO", titulo: "...", cliente: "...", formato: "...", descripcion: "..." }
+     Si el video es vertical (Short/Reel) agrega:  vertical: true
 
-2) TEXTOS Y CONTACTO
-   Edita js/data/content-es.js (español) y js/data/content-en.js (inglés):
-   textos, experiencia, educación, trabajos, WhatsApp, correo e Instagram.
+   Proyecto digital (una o varias imágenes, enlace opcional):
+     { tipo: "proyecto", titulo: "...", cliente: "...", formato: "...", descripcion: "...",
+       imagenes: ["img/digital/a.png", "img/digital/b.png"],
+       enlace: { texto: "Jugar en itch.io", url: "https://..." } }
+
+   El orden importa: lo primero de cada lista es lo que más se ve. Pon arriba tus mejores piezas.
+   El collage de la portada se cambia en hero.destacados.
+
+2) MINIATURAS (IMPORTANTE AL AGREGAR IMÁGENES)
+   La galería usa versiones ligeras en img/thumbs/ para cargar rápido; al hacer clic se abre la original.
+   Después de agregar imágenes en img/diseno o img/digital, ejecuta en Git Bash (necesita ffmpeg):
+
+       bash tools/miniaturas.sh
+
+   Crea las miniaturas que falten y actualiza js/data/thumbs.js (tamaños para acomodar la galería).
+   Si no lo ejecutas, la página sigue funcionando con la imagen original (solo carga más lento).
+
+3) TEXTOS, HABILIDADES Y CONTACTO
+   En los mismos archivos de contenido:
+     hero      -> disponibilidad, título, texto de presentación, clientes
+     perfil    -> sobre mí, experiencia, habilidades, idiomas (valor = % de la barra), herramientas, educación
+     contacto  -> WhatsApp (con código de país, ej. 52...), correo, Instagram, ruta del CV
    Los textos de menú/botones están en js/data/ui-es.js y js/data/ui-en.js.
+   Iconos de herramientas: img/Icons/ (SVG blanco sobre transparente).
 
-2.1) ESTRUCTURA DEL PROYECTO
+4) ESTRUCTURA DEL PROYECTO
    index.html          -> estructura (secciones)
    css/                -> estilos, un archivo por sección/componente
-   js/data/            -> contenido y textos (ES/EN)
-   js/                 -> lógica: idioma, tema, render, galería, lightbox, navegación, scroll
-   img/                -> imágenes e iconos
+   js/data/            -> contenido y textos (ES/EN) + thumbs.js (generado)
+   js/                 -> lógica: idioma, tema, render, filtros, lightbox, navegación, scroll
+   img/                -> imágenes, miniaturas, iconos y CV
+   tools/              -> script de miniaturas
 
-3) TU FOTO Y ESCUDO
-   img/foto.jpg y img/uacj.webp. Reemplázalos con el mismo nombre si quieres cambiarlos.
-
-4) PUBLICAR EN GITHUB PAGES
+5) PUBLICAR EN GITHUB PAGES
    Sube todo el contenido de esta carpeta a un repositorio y activa
    Settings > Pages > "Deploy from a branch" (rama main, carpeta /root).

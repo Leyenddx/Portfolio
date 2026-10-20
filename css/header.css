@@ -1,24 +1,22 @@
-/* HEADER: barra fija, logo, navegación, botón idioma/tema y menú móvil */
-.top{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:transform .4s var(--ease)}
-.top__bar{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.top__inner{display:flex;align-items:center;justify-content:flex-end;height:64px;gap:.5rem;transition:height .35s var(--ease)}
-.top__rule{height:12px;background:var(--red);transform-origin:left;transition:height .35s var(--ease)}
-.top.is-compact .top__inner{height:52px}
-.top.is-compact .top__rule{height:5px}
-.logo{position:absolute;left:0;top:0;width:66px;height:124px;transition:transform .45s var(--ease);transform-origin:top center;filter:drop-shadow(0 8px 10px rgba(0,0,0,.18))}
-.top.is-compact .logo{transform:scale(.58)}
-.logo svg{width:100%;height:100%}
-.nav{display:flex;gap:clamp(.4rem,2.2vw,2.4rem);margin-right:auto;margin-left:clamp(90px,14vw,190px)}
-.nav a{font:500 1rem var(--body);text-decoration:none;padding:.4rem .2rem;position:relative;color:var(--ink)}
+/* HEADER: barra fija, logo, navegación, idioma/tema, botón de contacto y menú móvil */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);border-bottom:3px solid var(--red);transition:box-shadow .3s}
+/* El fondo con blur va en ::before para que el menú móvil (fixed) pueda cubrir toda la pantalla */
+.top::before{content:"";position:absolute;inset:0;z-index:-1;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.top.is-compact{box-shadow:0 8px 24px -16px rgba(0,0,0,.35)}
+.top__inner{display:flex;align-items:center;height:var(--header);gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:900 1.15rem var(--display);font-stretch:120%;letter-spacing:.01em;flex-shrink:0}
+.logo img{height:36px;width:auto}
+.nav{display:flex;gap:clamp(1rem,2.6vw,2.4rem);margin-left:auto}
+.nav a{font:700 .98rem var(--body);text-decoration:none;padding:.4rem .1rem;position:relative}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
 .nav a:hover::after,.nav a.is-active::after{transform:scaleX(1);transform-origin:left}
-.menu-btn{display:none;background:none;border:0;color:var(--ink);width:44px;height:44px;cursor:pointer}
-.menu-btn span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:transform .3s}
-.lang-btn{flex-shrink:0;background:none;border:2px solid var(--blue);color:var(--blue);border-radius:999px;padding:.4rem .95rem;font:700 .85rem var(--body);letter-spacing:.03em;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease);position:relative;z-index:2}
-.lang-btn:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
-.theme-btn{flex-shrink:0;display:grid;place-items:center;width:38px;height:38px;padding:0;background:none;border:2px solid var(--blue);color:var(--blue);border-radius:50%;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease);position:relative;z-index:2}
-.theme-btn:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
+.top__tools{display:flex;align-items:center;gap:.5rem;margin-left:clamp(.5rem,2vw,1.6rem)}
+.theme-btn{width:38px;padding:0}
 .theme-btn svg{width:18px;height:18px}
 .theme-btn .i-sun{display:none}
 :root[data-theme="dark"] .theme-btn .i-sun{display:block}
 :root[data-theme="dark"] .theme-btn .i-moon{display:none}
+.menu-btn{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer;padding:0}
+.menu-btn span{display:block;width:22px;height:2px;background:currentColor;margin:5px auto;transition:transform .3s var(--ease)}
+.menu-btn[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}

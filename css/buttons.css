@@ -1,6 +1,13 @@
-/* BOTONES: .btn sólido y ghost (CTA) */
-.btn{display:inline-flex;align-items:center;gap:.6rem;font:700 1rem var(--body);padding:.9rem 1.5rem;border-radius:10px;text-decoration:none;border:2px solid var(--blue);cursor:pointer;transition:transform .3s var(--ease),background .3s,color .3s}
+/* BOTONES: .btn sólido, rojo y ghost (CTA), tamaño pequeño y botón de icono */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:700 1rem/1 var(--body);padding:.95rem 1.4rem;border-radius:999px;text-decoration:none;border:2px solid var(--blue);cursor:pointer;white-space:nowrap;transition:transform .3s var(--ease),background .3s,color .3s,border-color .3s}
+.btn svg{width:1.15em;height:1.15em;flex-shrink:0}
 .btn--solid{background:var(--blue);color:#fff}
 .btn--solid:hover{background:var(--red);border-color:var(--red);transform:translateY(-2px)}
-.btn--ghost{background:transparent;color:var(--blue)}
-.btn--ghost:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
+.btn--red{background:var(--red);border-color:var(--red);color:#fff}
+.btn--red:hover{background:var(--red-deep);border-color:var(--red-deep);transform:translateY(-1px)}
+.btn--ghost{background:transparent;color:var(--accent-text);border-color:currentColor}
+.btn--ghost:hover{background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-2px)}
+.btn--sm{font-size:.9rem;padding:.6rem 1rem}
+
+.icon-btn{flex-shrink:0;display:grid;place-items:center;height:38px;min-width:38px;padding:0 .7rem;background:none;border:2px solid var(--line);color:var(--ink);border-radius:999px;font:700 .82rem var(--body);letter-spacing:.04em;cursor:pointer;transition:border-color .3s,background .3s,color .3s}
+.icon-btn:hover{border-color:var(--blue);background:var(--blue);color:#fff}

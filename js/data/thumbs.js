@@ -1,0 +1,21 @@
+/* GENERADO por tools/miniaturas.sh: tamaño [ancho, alto] de cada miniatura. No editar a mano. */
+const THUMBS = {
+  "Camisa": [900,600],
+  "barber": [900,506],
+  "eci1": [851,2270],
+  "eci2": [900,1512],
+  "eci3": [825,1276],
+  "eci4": [825,1276],
+  "eci5": [900,1126],
+  "eci6": [900,1200],
+  "eci7": [792,1224],
+  "eci8": [792,1224],
+  "eci9": [612,792],
+  "miaad1": [900,900],
+  "miaad2": [900,900],
+  "PSTL1": [900,444],
+  "PSTL2": [900,760],
+  "Tribulacion": [900,420],
+  "ilustrr": [900,900],
+  "indsite": [900,420],
+};

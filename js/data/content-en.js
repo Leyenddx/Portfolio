@@ -1,81 +1,105 @@
-/* CONTENIDO (EN): same content in English */
+/* CONTENT (EN): same content in English */
 
 CONFIG.en = {
-  nombre: "Aron (Leyenddx)",
+  nombre: "Aron Navarro",
   marca: "Leyenddx",
 
   hero: {
-    titulo: "Welcome to|my portfolio",
-    rol: "Digital design, graphic design, video and communication",
-    texto: "I'm Aron (aka Leyenddx) 29 years old, a designer and editor based in Ciudad Juárez. With extensive experience creating audiovisual content for all kinds of media, as well as developing digital solutions, here I bring together what I've done and how I do it.",
-    foto: "img/foto.jpg"
+    disponible: "Open to work",
+    ciudad: "Ciudad Juárez, MX",
+    titulo: "Graphic design,|video editing|& digital design.",
+    texto: "I'm Aron Navarro (Leyenddx), a designer and editor. I create campaigns, corporate video, social media content and interactive experiences for companies and institutions such as ECI and UACJ.",
+    clientesTitulo: "I've worked with",
+    clientes: ["ECI · Electrical Components International", "UACJ", "MIAAD", "Boyante", "Freelance"],
+    destacados: [
+      { cat: "diseno",  src: "img/thumbs/eci6.webp" },
+      { cat: "video",   src: "https://i.ytimg.com/vi/Qs_ZFwY1nxg/maxresdefault.jpg" },
+      { cat: "digital", src: "img/thumbs/indsite.webp" }
+    ]
   },
 
-  educacion: {
-    escudo: "img/uacj.webp",
-    profesional: {
-      titulo: "Professional education",
-      subtitulo: "Universidad Autónoma de Ciudad Juárez",
-      texto: "Recent graduate of the Interactive Media Digital Design program at UACJ's IADA campus. DDMI is a program that blends the best of several branches of technology, design, engineering and art. Don't be misled; although I have just graduated, I have years of work experience, having had the opportunity to work on various projects and with different companies and agencies that helped me grow."
+  trabajos: {
+    diseno: {
+      numero: "01", titulo: "Graphic design", corto: "Design",
+      intro: "Internal campaigns, posters, infographics, branding and social media pieces built around clear communication goals.",
+      herramientas: ["Photoshop", "Illustrator"],
+      items: [
+        { tipo: "imagen", src: "img/diseno/eci6.webp",   titulo: "Your career at Electro", cliente: "ECI", formato: "Poster", descripcion: "Internal campaign poster about the employee career path." },
+        { tipo: "imagen", src: "img/diseno/miaad1.webp", titulo: "Eureka AICA", cliente: "MIAAD · UACJ", formato: "Social media post", descripcion: "Announcement of the European Commission's approval of the Erasmus+ Eureka AICA project." },
+        { tipo: "imagen", src: "img/diseno/eci1.webp",   titulo: "Somos Familia", cliente: "ECI", formato: "Recognition campaign", descripcion: "Vertical banner for an employee recognition campaign." },
+        { tipo: "imagen", src: "img/diseno/Camisa.webp", titulo: "Corremos juntos", cliente: "ECI", formato: "T-shirt design", descripcion: "Front and back T-shirt design for a corporate sports event." },
+        { tipo: "imagen", src: "img/diseno/barber.webp", titulo: "Fade City Barber Shop", cliente: "Fade City", formato: "Logo", descripcion: "Graffiti-style lettering identity over the city skyline." },
+        { tipo: "imagen", src: "img/diseno/eci3.webp",   titulo: "World Autism Awareness Day", cliente: "ECI", formato: "Poster", descripcion: "Awareness campaign for internal communications." },
+        { tipo: "imagen", src: "img/diseno/eci4.webp",   titulo: "What is ASD?", cliente: "ECI", formato: "Infographic", descripcion: "Companion infographic for the World Autism Awareness Day campaign." },
+        { tipo: "imagen", src: "img/diseno/miaad2.jpg",  titulo: "2nd National Graduate Summit", cliente: "MIAAD · UACJ", formato: "Social media post", descripcion: "Promotion for a student summit on Artificial Intelligence and Data Analytics." },
+        { tipo: "imagen", src: "img/diseno/eci5.webp",   titulo: "Plant 3 hiring", cliente: "ECI", formato: "Flyer", descripcion: "Recruitment flyer with openings, requirements and benefits." },
+        { tipo: "imagen", src: "img/diseno/eci2.webp",   titulo: "Connecting Asia & Mexico", cliente: "ECI", formato: "Newsletter", descripcion: "Internal newsletter about a collaboration visit between plants." },
+        { tipo: "imagen", src: "img/diseno/eci7.jpg",    titulo: "World Diabetes Day", cliente: "ECI", formato: "Infographic", descripcion: "Health piece for the plant's medical division." },
+        { tipo: "imagen", src: "img/diseno/eci9.jpg",    titulo: "ECI 50th Anniversary", cliente: "ECI", formato: "Recognition letter", descripcion: "Seniority recognition template for the 50th anniversary." }
+      ]
     },
-    complementaria: {
-      titulo: "Continuing education",
-      subtitulo: "Courses and certifications",
-      texto: "Digital design is constantly evolving, so I like to stay up to date by taking all kinds of courses: 3D modeling, motion graphics, web development, design, video editing, video games, and even prompting and AI as design tools."
+
+    video: {
+      numero: "02", titulo: "Video editing", corto: "Video",
+      intro: "Corporate video, event coverage, spots and vertical social content: visual scripting, editing, motion graphics and color.",
+      herramientas: ["Premiere Pro", "After Effects", "DaVinci Resolve"],
+      items: [
+        { tipo: "youtube", src: "Qs_ZFwY1nxg", titulo: "Data Center", cliente: "ECI", formato: "Corporate video", descripcion: "Institutional video about the plant's capabilities." },
+        { tipo: "youtube", src: "hi4sQe1Siik", titulo: "ECI 5K Run", cliente: "ECI", formato: "Event video", descripcion: "Coverage and editing of the employee sports event." },
+        { tipo: "youtube", src: "NJKLn5tpc5g", titulo: "MIAAD Spot", cliente: "MIAAD · UACJ", formato: "Vertical spot", vertical: true, descripcion: "Vertical testimonial for the Master's in AI and Data Analytics." },
+        { tipo: "youtube", src: "PmzrSf-JDtI", titulo: "Top Perro Frenchies", cliente: "Freelance", formato: "Social media capsule", vertical: true, descripcion: "Vertical content for social media." }
+      ]
+    },
+
+    digital: {
+      numero: "03", titulo: "Digital design", corto: "Digital",
+      intro: "Interactive apps, video games and 3D experiences: interface design, programming, art and audio.",
+      herramientas: ["Unity", "Blender", "VS Code"],
+      items: [
+        { tipo: "proyecto", titulo: "Press Start to Learn", cliente: "UACJ · AI Congress 2025", formato: "Educational app",
+          descripcion: "Interactive app/game commissioned by UACJ for the neural networks workshop at its 2025 Artificial Intelligence congress. It explains neural network concepts in a dynamic, easy way.",
+          imagenes: ["img/digital/PSTL1.png", "img/digital/PSTL2.png"] },
+        { tipo: "proyecto", titulo: "Indsite: Ecos de Paquimé", cliente: "Personal project", formato: "3D experience",
+          descripcion: "A history and art outreach project: a short experience made of tours that teaches about the indigenous culture of Chihuahua, Mexico.",
+          imagenes: ["img/digital/indsite.png"],
+          enlace: { texto: "Try it on itch.io", url: "https://leyenddx.itch.io/indsite-ecos-de-paquim" } },
+        { tipo: "proyecto", titulo: "Tribulation: Last Breath", cliente: "Personal project", formato: "FPS video game",
+          descripcion: "A first-person shooter where you must hold out as long as possible. It combines programming, design and audio recording.",
+          imagenes: ["img/digital/Tribulacion.png"],
+          enlace: { texto: "Play on itch.io", url: "https://leyenddx.itch.io/tribulacion-last-breath" } },
+        { tipo: "proyecto", titulo: "Digital illustration", cliente: "Personal", formato: "Illustration",
+          descripcion: "Hand-drawn digital illustration inspired by Mexican lucha libre and lotería.",
+          imagenes: ["img/digital/ilustrr.webp"] }
+      ]
     }
   },
 
-  herramientas: [
-    { grupo: "3D & real-time", items: [
-      { nombre: "Blender", icono: "img/Icons/Blender.svg" }, { nombre: "Unity", icono: "img/Icons/Unity.svg" }, { nombre: "DaVinci Resolve", icono: "img/Icons/DaVinci.svg" } ] },
-    { grupo: "Adobe", items: [
-      { nombre: "Photoshop", icono: "img/Icons/PS.svg" }, { nombre: "Illustrator", icono: "img/Icons/AI.svg" },
-      { nombre: "After Effects", icono: "img/Icons/AE.svg" }, { nombre: "Premiere Pro", icono: "img/Icons/PR.svg" } ] },
-    { grupo: "Code", items: [
-      { nombre: "VS Code", icono: "img/Icons/Visual.svg" }, { nombre: "Claude", icono: "img/Icons/Claude.svg" }, { nombre: "GitHub", icono: "img/Icons/Github.svg" } ] }
-  ],
-
-  experiencia: [
-    { empresa: "ECI", puesto: "Communications Specialist",
-      texto: "National-level internal communications and marketing: recognition campaigns, infographics, corporate video and social media content." },
-    { empresa: "Boyante", puesto: "Graphic Designer",
-      texto: "Developer of visual content for social media, serving a range of small and medium-sized businesses." },
-    { empresa: "UACJ · MIAAD", puesto: "Work-study scholarship · Design and editing",
-      texto: "Thanks to UACJ's work-study scholarship, I had the opportunity to work closely with the coordination of UACJ's Master's in Artificial Intelligence and Data Analytics, developing audiovisual communication material, flyers, video spots, etc." },
-    { empresa: "Freelance", puesto: "Editor and Developer",
-      texto: "As an independent contractor I've worked on a variety of projects: design, video editing, web development, etc." }
-  ],
-
-  trabajos: {
-    diseno: { titulo: "Design", items: [
-      { tipo: "imagen", src: "img/diseno/eci1.webp", titulo: "Recognition campaign", descripcion: "" },
-      { tipo: "imagen", src: "img/diseno/eci4.webp", titulo: "Infographic", descripcion: "Piece for internal communications." },
-      { tipo: "imagen", src: "img/diseno/miaad1.webp", titulo: "Communication flyer for MIAAD", descripcion: "" },
-      { tipo: "imagen", src: "img/diseno/eci6.webp", titulo: "Poster", descripcion: "" },
-      { tipo: "imagen", src: "img/diseno/eci5.webp", titulo: "Flyer", descripcion: "" },
-      { tipo: "imagen", src: "img/diseno/eci2.webp", titulo: "Newsletter", descripcion: "" },
-      { tipo: "imagen", src: "img/diseno/miaad2.jpg", titulo: "Social media post", descripcion: "" }
-    ]},
-    video: { titulo: "Video", items: [
-      { tipo: "youtube", src: "Qs_ZFwY1nxg", titulo: "Corporate video", descripcion: "" },
-      { tipo: "youtube", src: "hi4sQe1Siik", titulo: "Social video", descripcion: "" },
-      { tipo: "youtube", src: "NJKLn5tpc5g", titulo: "MIAAD testimonial", descripcion: "" },
-      { tipo: "youtube", src: "PmzrSf-JDtI", titulo: "Social media capsule", descripcion: "" }
-    ]},
-    digital: { titulo: "Digital design", items: [
-      { tipo: "imagen", src: "img/digital/ilustrr.webp", titulo: "Digital illustration", descripcion: "Hand-drawn digital illustration." },
-      { tipo: "imagen", src: "img/digital/PSTL1.png", titulo: "PRESS START TO LEARN", descripcion: "Press Start to Learn is an app commissioned by UACJ specifically for the neural networks workshop at UACJ's Artificial Intelligence congress held in 2025." },
-      { tipo: "imagen", src: "img/digital/PSTL2.png", titulo: "PRESS START TO LEARN", descripcion: "It's an interactive app/game that serves as support material to explain neural network concepts in a dynamic and easy way." },
-      { tipo: "imagen", src: "img/digital/indsite.png", titulo: "PROJECT INDSITE", descripcion: "Indiste is a project dedicated to sharing history and art; it is a brief experience consisting of three tours that aims to educate people about the indigenous culture of the Mexican state of Chihuahua. You can try it out by downloading it from the following link: https://leyenddx.itch.io/indsite-ecos-de-paquim." },
-      { tipo: "imagen", src: "img/digital/Tribulacion.png", titulo: "Tribulation: Last Breath", descripcion: "“Tribulation: Last Breath” is a small first-person shooter where you must hold out for as long as possible; this project put into practice various skills in programming, design, audio recording, and more. You can try it out at the following link: https://leyenddx.itch.io/tribulacion-last-breath." }
-    ]}
+  perfil: {
+    foto: "img/foto.jpg",
+    rol: "Graphic designer · Video editor · Digital designer",
+    texto: "Interactive Media Digital Design graduate with years of experience at agencies, companies and institutions. I combine design, video and technology so every piece communicates clearly.",
+    experiencia: [
+      { empresa: "ECI", puesto: "Communications Specialist", texto: "National internal communications and marketing: campaigns, infographics, corporate video and social media." },
+      { empresa: "Boyante", puesto: "Graphic Designer", texto: "Visual social media content for small and medium-sized businesses." },
+      { empresa: "UACJ · MIAAD", puesto: "Work-study · Design and editing", texto: "Audiovisual material, flyers and spots for the Master's in AI and Data Analytics." },
+      { empresa: "Freelance", puesto: "Editor and Developer", texto: "Design, video editing and web development projects." }
+    ],
+    habilidades: [
+      "Graphic & editorial design", "Video editing & post-production", "Motion graphics", "Social media content",
+      "Internal communications & marketing", "Branding", "3D modeling", "Game & app development", "WordPress web development", "AI as a design tool"
+    ],
+    idiomas: [
+      { nombre: "Spanish", nivel: "Native", valor: 100 },
+      { nombre: "English", nivel: "Upper-intermediate", valor: 75 }
+    ],
+    herramientas: CONFIG.es.perfil.herramientas,
+    educacion: {
+      escudo: "img/uacj.webp",
+      titulo: "B.A. in Interactive Media Digital Design",
+      institucion: "Universidad Autónoma de Ciudad Juárez · IADA",
+      complementaria: "Continuing education: 3D modeling, motion graphics, web development, video editing, video games, prompting and AI."
+    }
   },
 
-  contacto: {
-    whatsapp: "6564581972",
-    telefonoVisible: "+52 656 458 1972",
-    correo: "aarok_ny224@hotmail.com",
-    instagram: "aron_leyend0806",
-    ciudad: "Ciudad Juárez, Chihuahua"
-  }
+  contacto: CONFIG.es.contacto
 };
